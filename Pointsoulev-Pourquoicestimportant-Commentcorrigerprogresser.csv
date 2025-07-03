@@ -1,0 +1,5 @@
+"Point soulevé","Pourquoi c’est important ?","Comment corriger/progresser ?"
+"Utilisation de CommonJS (require)","Le standard moderne Node.js est ESM (import/export), plus compatible avec l’écosystème JS/TS actuel.","Ajoute""type"": ""module""dansbackend/package.jsonet migre versimport/export."
+"Tout dans un seul fichier","Devient vite illisible, difficile à maintenir et à tester en grandissant.","Sépare la config, les routes, les plugins, etc. dans/src/."
+"Dossiers/src/routes,/src/pluginsnon utilisés","Tu as créé ces dossiers, il faut les exploiter pour charger dynamiquement tes routes/plugins.","Utilisefastify.register()ou@fastify/autoloadpour modulariser ton code."
+"Lancement serveur non asynchrone","Les plugins/chargements asynchrones sont courants, il faut une fonctionasyncdédiée pour gérer les erreurs.","Utilise une fonctionasync startServer()pour lancer ton app proprement."
