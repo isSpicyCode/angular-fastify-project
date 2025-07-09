@@ -16,6 +16,8 @@ Thumbs.db
 
 # Ignore all markdown files
 *.md
+Pointsoulev-Pourquoicestimportant-Commentcorrigerprogresser.csv
+server.ts
 
 # Except README.md
 !README.md
