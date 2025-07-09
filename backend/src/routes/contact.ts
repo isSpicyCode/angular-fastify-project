@@ -1,5 +1,5 @@
 // backend/src/routes/contact.ts
-import { FastifyInstance } from 'fastify';
+import { FastifyInstance, FastifyRequest } from 'fastify';
 import { contactSchema } from '../schemas/contact.js';
 import { handleContact } from '../services/contact.js';
 import { dataStore } from '../data/index.js';
@@ -7,9 +7,10 @@ import type { Contact } from '../data/contact.js';
 
 export default async function contactRoutes(fastify: FastifyInstance) {
   // Route POST pour créer un contact
-  fastify.post('/api/contact', contactSchema, async (request, reply) => {
+  fastify.post('/api/contact', { schema: contactSchema },
+  async (request: FastifyRequest<{ Body: Omit<Contact, 'id' | 'timestamp'> }>, reply) => {
     try {
-      const newContact = await handleContact(request.body as Omit<Contact, 'id' | 'timestamp'>);
+      const newContact = await handleContact(request.body);
       return reply.send({
         success: true,
         data: newContact

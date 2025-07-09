@@ -1,6 +1,6 @@
-import type { FastifySchema } from 'fastify';
 
-export const contactSchema: FastifySchema = {
+
+export const contactSchema = {
   body: {
     type: 'object',
     required: ['nom', 'prenom', 'email', 'message'],
