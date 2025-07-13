@@ -4,7 +4,6 @@
 // Sert de « barrel file » pour simplifier et uniformiser les imports dans les routes et services.
 
 import cardsRoutes from "../routes/cards.js";
-import contactRoutes from "../routes/contact.js";
 import galleryRoutes from "../routes/gallery.js";
 import type { Contact } from "./contact.js";
 import { FileStorage } from "../utils/fileStorage.js";

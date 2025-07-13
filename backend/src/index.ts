@@ -25,7 +25,7 @@ import contactRoutes from './routes/contact.js';
  * Crée et configure une instance Fastify.
  * @returns {import('fastify').FastifyInstance}
  */
-async function createServer(): Promise<ReturnType<typeof Fastify>> { // createServer() : Sépare la création/config du serveur. Permet de tester ou d’ajouter des hooks/plugins facilement.
+export async function createServer(): Promise<ReturnType<typeof Fastify>> { // createServer() : Sépare la création/config du serveur. Permet de tester ou d’ajouter des hooks/plugins facilement.
   const fastify = Fastify({ logger: true });
 
   // Configuration CORS pour autoriser le frontend Angular (localhost:4200)

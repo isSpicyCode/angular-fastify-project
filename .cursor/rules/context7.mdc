@@ -1,0 +1,11 @@
+---
+description: Always fetch latest documentation using context7 MCP
+globs:
+  - "aio/content/guide/**/*.md"
+  - "packages/**/src/**/*.ts"
+  - "packages/**/ng-package.json"
+  - "packages/**/package.schema.json"
+  - "examples/**/*.{ts,html,md}"
+alwaysApply: true
+mcpServer: "context7"
+---

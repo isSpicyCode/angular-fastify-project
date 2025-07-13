@@ -1,0 +1,5 @@
+---
+description: Rappel moi le moment ou j'en serais là, merci -- j'ai Créé des données mock pertinentes, Branché correctement ta route GET, Vérifié le fonctionnement de ton API avec un vrai appel HTTP, Et tu progresses sur des bases professionnelles ! C’est exactement la démarche d’un développeur moderne tu valides chaque étape, tu comprends ce que tu fais, et tu construis un socle solide pour la suite (tests auto, frontend, etc.). Prochaines étapes possibles (quand tu seras prêt) Ajouter un endpoint POST pour créer un contact. Écrire un test automatisé pour vérifier l’ajout d’un contact. Brancher le frontend Angular sur cette API. Explorer la validation des données et la gestion des erreurs. --
+globs:
+alwaysApply: true
+---
