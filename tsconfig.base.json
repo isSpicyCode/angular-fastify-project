@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+      /* Strict mode - commun */
+      "strict": true,
+      "noImplicitOverride": true,
+      "noPropertyAccessFromIndexSignature": true,
+      "noImplicitReturns": true,
+      "noFallthroughCasesInSwitch": true,
+  
+      /* Build - commun */
+      "target": "ES2022",
+      "skipLibCheck": true,
+      "isolatedModules": true,
+      "useDefineForClassFields": true,
+      "experimentalDecorators": true,
+  
+      /* Source maps - commun */
+      "sourceMap": true,
+      "inlineSources": true,
+  
+      /* Paths communs */
+      "baseUrl": "./",
+      "paths": {
+        "@shared/*": ["./shared/*"]
+      }
+    }
+  }

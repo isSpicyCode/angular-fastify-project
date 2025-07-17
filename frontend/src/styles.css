@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+@layer components {
+    .btn-red {
+      background-color: #af5b5e !important;
+      color: white !important;
+      font-size: 14px !important;
+      padding: 10px !important;
+    }
+    .btn-black {
+      background-color: #000 !important;
+      color: white !important;
+      font-size: 14px !important;
+      padding: 10px !important;
+    }
+  }
