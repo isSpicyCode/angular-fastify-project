@@ -1,5 +1,8 @@
-<div>
-  <app-navigation />
-  <img src="https://images.unsplash.com/photo-1593062096033-9a26b09da705?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="header image" class="w-full h-3/4 object-cover absolute top-0 left-0 right-0 bottom-0 z-0">
-</div>
-
+<app-navigation />
+@if (imageUrl) {
+    <img
+    src="{{imageUrl}}"
+    alt="{{imageAlt}}"
+    class="w-full h-96 object-cover object-bottom"
+    >
+}

@@ -2,12 +2,20 @@
   "extends": "../tsconfig.base.json",
   "compilerOptions": {
     /* Frontend spécifique */
+    "baseUrl": "src", 
     "module": "ES2022",
     "moduleResolution": "Bundler",
     "lib": ["ES2022", "DOM"],
     "types": ["node"],
-    "emitDecoratorMetadata": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,               
+    "noImplicitAny": true,                   
+    "strict": true,            
+
 
     /* Paths frontend + vos alias existants */
     "paths": {

@@ -1,15 +1,24 @@
-/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
-/* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": []
+    "baseUrl": "src",                          // ← indispensable pour activer les alias de paths
+    "types": [],                               // ou spécifier ["node"] si vous avez besoin de types Node
+    "esModuleInterop": true,                   // meilleure compatibilité CommonJS/ESM
+    "allowSyntheticDefaultImports": true       // autorise l’import par défaut
+  },
+  "angularCompilerOptions": {
+    "enableIvy": true,                         // moteur de rendu Ivy activé par défaut
+    "strictInjectionParameters": true,         // hérité du tsconfig.json
+    "strictTemplates": true                    // hérité du tsconfig.json
   },
   "include": [
-    "src/**/*.ts"
+    "src/**/*.ts",
+    "src/**/*.html"                            // ← pour que l’Angular Language Service analyse vos templates
   ],
   "exclude": [
-    "src/**/*.spec.ts"
+    "src/**/*.spec.ts",                        // tests exclus
+    "src/test.ts"                              // fichier de bootstrap de tests
   ]
 }
+

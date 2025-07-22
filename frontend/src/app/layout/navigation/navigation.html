@@ -1,4 +1,4 @@
-<div class="max-w-full mb-10 text relative top-0 left-0 z-10 bg-neutral-950">
+<div class="max-w-full text relative z-10 bg-neutral-950">
     <nav class="relative">
       <!-- Container principal -->
       <div class="flex items-center justify-between md:justify-around px-4 py-3 md:px-6">
@@ -15,7 +15,7 @@
           <ul class="flex items-center gap-8 text-lg font-semibold">
             <li>
               <a 
-                href="home" 
+                routerLink="/" 
                 class="text-zinc-50 hover:text-red-500 transition-colors duration-200 px-3 py-2 rounded-md hover:bg-gray-100"
               >
                 Accueil
@@ -23,7 +23,7 @@
             </li>
             <li>
               <a 
-                href="contact" 
+                routerLink="/contact" 
                 class="text-zinc-50 hover:text-red-500 transition-colors duration-200 px-3 py-2 rounded-md hover:bg-gray-100"
               >
                 Contact
@@ -70,7 +70,7 @@
 
       <!-- Menu mobile offcanvas -->
       <div 
-        class="fixed top-0 right-0 h-full w-80 bg-white shadow-2xl transform transition-transform duration-300 ease-in-out z-50 md:hidden"
+        class="fixed top-0 right-0 h-full w-80 bg-neutral-800 shadow-2xl transform transition-transform duration-300 ease-in-out z-50 md:hidden"
         [class.translate-x-0]="isMenuOpen"
         [class.translate-x-full]="!isMenuOpen"
       >
@@ -80,7 +80,7 @@
             <div class="w-8 h-8 me-2">
                 <img width="94" height="94" src="https://img.icons8.com/3d-fluency/94/bang.png" alt="bang"/>
             </div>
-            <span class="text-lg font-bold text-gray-900">Menu</span>
+            <span class="text-lg font-bold text-zinc-50">Menu</span>
           </div>
           <button
             (click)="closeMenu()"
@@ -88,7 +88,7 @@
             aria-label="Close menu"
           >
             <svg 
-              class="w-6 h-6 text-gray-700" 
+              class="w-6 h-6 text-zinc-50 hover:text-red-500" 
               fill="none" 
               stroke="currentColor" 
               viewBox="0 0 24 24"
@@ -103,15 +103,15 @@
           <ul class="flex flex-col gap-4">
             <li>
               <a 
-                href="home" 
+                routerLink="/" 
                 (click)="closeMenu()"
-                class="block text-lg font-semibold text-gray-700 hover:text-red-500 transition-colors duration-200 py-3 px-4 rounded-md hover:bg-gray-50">🏠 Accueil</a>
+                class="block text-lg font-semibold text-zinc-50 hover:text-neutral-900 transition-colors duration-200 py-3 px-4 rounded-md hover:bg-gray-50">🏠 Accueil</a>
             </li>
             <li>
               <a 
-                href="contact" 
+                routerLink="/contact" 
                 (click)="closeMenu()"
-                class="block text-lg font-semibold text-gray-700 hover:text-red-500 transition-colors duration-200 py-3 px-4 rounded-md hover:bg-gray-50">📞 Contact</a>
+                class="block text-lg font-semibold text-zinc-50 hover:text-neutral-900 transition-colors duration-200 py-3 px-4 rounded-md hover:bg-gray-50">📞 Contact</a>
             </li>
           </ul>
         </nav>
